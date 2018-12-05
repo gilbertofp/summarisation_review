@@ -14,14 +14,16 @@ import nltk
 from collections import OrderedDict, defaultdict
 from scipy.linalg import norm
 from nltk.tokenize import word_tokenize
+import os
 
 profile = False
 
 # -----------------------------------------------------------------------------#
 # Specify model and table locations here
 # -----------------------------------------------------------------------------#
-path_to_models = '/Users/gflores/PycharmProjects/summarisation_review/models/'
-path_to_tables = '/Users/gflores/PycharmProjects/summarisation_review/models/'
+project_path = os.path.dirname(os.path.abspath(__file__))
+path_to_models = project_path + '/models/'
+path_to_tables = project_path + '/models/'
 # -----------------------------------------------------------------------------#
 
 path_to_umodel = path_to_models + 'uni_skip.npz'

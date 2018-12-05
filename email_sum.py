@@ -93,11 +93,13 @@ def summarize(emails):
     print('Splitting into sentences...')
     split_sentences(emails)
     print('Starting to encode...')
+    print("pros reviews: " + str(len(emails)))
     enc_emails = skipthought_encode(emails)
     print('Encoding Finished')
     for i in range(n_emails):
         enc_email = enc_emails[i]
         n_clusters = int(np.ceil(len(enc_email) ** 0.5))
+        print("clusters" + str(n_clusters))
         kmeans = KMeans(n_clusters=n_clusters, random_state=0)
         kmeans = kmeans.fit(enc_email)
         avg = []
