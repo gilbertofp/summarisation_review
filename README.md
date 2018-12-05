@@ -1,3 +1,4 @@
+DO NOT COMMIT  companies_100_reviews.csv it is sensible data
 # summarisation_review
 
 1. Run inside models folder the .sh file, ./run.sh
